@@ -160,9 +160,9 @@ export default function Dashboard(props) {
                 </Routes>
               </Box>
             ) : null}
-            <Box>
+            {/* <Box>
               <Footer />
-            </Box>
+            </Box> */}
           </Box>
         </SidebarContext.Provider>
       </Box>

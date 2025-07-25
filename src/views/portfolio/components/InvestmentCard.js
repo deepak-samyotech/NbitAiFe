@@ -75,10 +75,12 @@ const InvestmentCard = ({
         <Button
           mt={4}
           px={6}
-          size="xs"
+          size="sm"
           backgroundColor="#445fe6ff"
           color="white"
           _hover="none"
+          borderRadius="md"
+          fontSize="xs"
         >
           View Transactions
         </Button>

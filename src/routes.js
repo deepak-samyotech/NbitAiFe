@@ -36,6 +36,14 @@ import Profile from 'views/Profile';
 import SignInCentered from 'views/auth/signIn';
 import Register from 'views/auth/register';
 import Portfolio from 'views/portfolio';
+import AboutUs from 'views/aboutus';
+import HelpSupportForm from 'views/helpsupport';
+import SettingsPanel from 'views/settings';
+import LogoutModal from 'views/logout';
+import Payment from 'views/payment';
+import Subscription from 'views/subscription';
+import BinanceBoot from 'views/binanseboot';
+import AITradingBoot from 'views/aitradingboot';
 
 const routes = [
   {
@@ -80,54 +88,41 @@ const routes = [
     icon: (
       <Icon as={MdSubscriptions} width="20px" height="20px" color="inherit" />
     ),
-    component: <RTL />,
+    component: <Subscription />,
   },
   {
     name: 'Payment History',
     layout: '/admin',
     path: '/payment-history',
     icon: <Icon as={MdHistory} width="20px" height="20px" color="inherit" />,
-    component: <RTL />,
+    component: <Payment />,
   },
-  // {
-  //   name: 'AI Trading Boot',
-  //   layout: '/admin',
-  //   path: '/ai-trading-boot',
-  //   icon: <Icon as={MdSmartToy} width="20px" height="20px" color="inherit" />,
-  //   component: <RTL />,
-  //   children: [
-  //     {
-  //       name: 'Boot',
-  //       path: '/ai-trading-boot',
-  //       component: <RTL />,
-  //     },
-  //     {
-  //       name: 'Dashboard',
-  //       path: '/ai-trading-dashboard',
-  //       component: <RTL />,
-  //     },
-  //   ],
-  // },
   {
     name: 'AI Trading Boot',
     layout: '/admin',
     path: '/ai-trading-boot',
-    component: <RTL />,
+    // component: <AITradingBoot />,
     icon: <Icon as={MdSmartToy} width="20px" height="20px" color="inherit" />,
+
     subNav: [
       {
-        name: 'Binanse Boot',
-        path: '/ai-trading-boot/binanse-boot',
-        component: <RTL />,
+        name: 'Binance Boot',
+        path: '/ai-trading-boot/binance-boot',
+        component: <BinanceBoot />,
+        icon: (
+          <Icon as={MdSmartToy} width="16px" height="16px" color="inherit" />
+        ),
       },
       {
         name: 'CoinStore Boot',
         path: '/ai-trading-boot/coinstore-boot',
         component: <RTL />,
+        icon: (
+          <Icon as={MdSmartToy} width="16px" height="16px" color="inherit" />
+        ),
       },
     ],
   },
-
   {
     name: 'Profile',
     layout: '/admin',
@@ -140,28 +135,28 @@ const routes = [
     layout: '/admin',
     path: '/settings',
     icon: <Icon as={MdSettings} width="20px" height="20px" color="inherit" />,
-    component: <RTL />,
+    component: <SettingsPanel />,
   },
   {
     name: 'Help Supports',
     layout: '/admin',
     path: '/help-supports',
     icon: <Icon as={MdHelpCenter} width="20px" height="20px" color="inherit" />,
-    component: <RTL />,
+    component: <HelpSupportForm />,
   },
   {
     name: 'About Us',
     layout: '/admin',
     path: '/about-us',
     icon: <Icon as={MdInfo} width="20px" height="20px" color="inherit" />,
-    component: <RTL />,
+    component: <AboutUs />,
   },
   {
     name: 'Logout',
     layout: '/admin',
     path: '/logout',
     icon: <Icon as={MdLogout} width="20px" height="20px" color="inherit" />,
-    component: <RTL />,
+    component: <LogoutModal />,
   },
 
   {

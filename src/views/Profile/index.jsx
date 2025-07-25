@@ -70,9 +70,9 @@ const Profile = () => {
           bg="purple.500"
         />
         <Box>
-          <Heading as="h2" size="lg">
+          <Text fontSize="2xl" mb={5} fontWeight="semibold">
             Profile
-          </Heading>
+          </Text>
           <Text color="gray.500">{initialProfileValues.email}</Text>
         </Box>
       </Flex>
@@ -230,7 +230,11 @@ const Profile = () => {
                 {isEditing ? (
                   <>
                     <Button
-                      colorScheme="purple"
+                      backgroundColor="#445fe6ff"
+                      color="white"
+                      _hover="none"
+                      borderRadius="md"
+                      fontSize="sm"
                       type="submit"
                       mr={2}
                       isLoading={isSubmitting}
@@ -246,8 +250,12 @@ const Profile = () => {
                   </>
                 ) : (
                   <Button
-                    colorScheme="purple"
                     onClick={() => setIsEditing(true)}
+                    backgroundColor="#445fe6ff"
+                    color="white"
+                    _hover="none"
+                    borderRadius="md"
+                    fontSize="sm"
                   >
                     Edit Profile
                   </Button>
@@ -338,7 +346,11 @@ const Profile = () => {
               </Field>
               <Button
                 type="submit"
-                colorScheme="purple"
+                backgroundColor="#445fe6ff"
+                color="white"
+                _hover="none"
+                borderRadius="md"
+                fontSize="sm"
                 mt={4}
                 isLoading={isSubmitting}
               >
